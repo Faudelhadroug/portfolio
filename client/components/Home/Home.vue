@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Animation />
     <!-- <div class="dev">{{ typeDevice }}</div> -->
     <v-container>
       <v-row>
@@ -18,12 +17,15 @@
 <script>
 import Presentation from '@/components/Home/Presentation.vue'
 import Preference from '@/components/Home/Preference.vue'
-import Animation from '@/components/Home/Animation.vue'
+
 export default {
+  transition: {
+    name: 'fade',
+    mode: 'out-in',
+  },
   components: {
     Presentation,
     Preference,
-    Animation,
   },
   data() {
     return {

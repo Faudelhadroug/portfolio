@@ -30,18 +30,20 @@
       <v-row v-if="visible">
         <v-col cols="2"></v-col>
         <v-col class="text-center home--cinco" cols="8">
-          <v-btn
-            :color="colorBtn"
-            dark
-            large
-            width="175px"
-            :outlined="!hover"
-            :loading="loading"
-            @mouseover="hover = true"
-            @mouseleave="hover = false"
-            @click="loadingComponent"
-            >Contactez moi</v-btn
-          >
+          <NuxtLink to="/contact" tag="btn">
+            <v-btn
+              :color="colorBtn"
+              dark
+              large
+              width="175px"
+              :outlined="!hover"
+              :loading="loading"
+              @mouseover="hover = true"
+              @mouseleave="hover = false"
+              @click="loadingComponent"
+              >Contactez moi</v-btn
+            >
+          </NuxtLink>
         </v-col>
         <v-col cols="2"></v-col>
       </v-row>
