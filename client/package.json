@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
+    "gsap": "file:gsap-bonus.tgz",
     "nuxt": "^2.13.0"
   },
   "devDependencies": {

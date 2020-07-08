@@ -1,14 +1,15 @@
 <template>
-  <div>
+  <div id="navBar">
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
       :clipped="clipped"
+      :disable-resize-watcher="true"
       fixed
       app
     >
       <v-list>
-        <v-icon class="ml-4 mb-2 d-lg-none" @click="drawer = !drawer">
+        <v-icon class="ml-4 mb-2" @click="drawer = !drawer">
           mdi-close-box
         </v-icon>
         <v-list-item
@@ -28,15 +29,27 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn text rounded @click="toggleTheme">
+      <v-app-bar-nav-icon
+        class="d-md-none d-lg-none"
+        @click.stop="drawer = !drawer"
+      />
+      <v-btn
+        v-for="(item, i) in items"
+        :key="i"
+        text
+        rounded
+        :to="item.to"
+        class="d-none d-md-block"
+        router
+        exact
+      >
+        <v-icon class="mt-1">{{ item.title }}</v-icon></v-btn
+      >
+      <v-spacer></v-spacer>
+      <v-btn class="mr-5" @click="toggleTheme">
         {{ darkmode ? 'Light mode' : 'Dark mode' }}
       </v-btn>
-      <v-spacer />
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title class="subtitle-2 float-right" v-text="title" />
     </v-app-bar>
   </div>
 </template>
@@ -65,7 +78,7 @@ export default {
           to: '/contact',
         },
       ],
-      miniVariant: true, // false permet dafficher la nav du côté en entier
+      miniVariant: false, // false permet dafficher la nav du côté en entier
       title: 'Faudel HADROUG',
       darkmode: true,
     }
@@ -79,4 +92,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#navBar {
+  margin-bottom: 60px;
+}
+</style>

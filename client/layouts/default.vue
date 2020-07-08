@@ -1,11 +1,7 @@
 <template>
   <v-app dark>
     <NavBar />
-    <v-main>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-main>
+    <nuxt />
     <Footer />
   </v-app>
 </template>
@@ -20,3 +16,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.container {
+  max-width: 100%;
+}
+</style>

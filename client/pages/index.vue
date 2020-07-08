@@ -1,9 +1,15 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6> </v-flex>
-  </v-layout>
+  <div>
+    <!-- <v-flex xs12 sm8 md6> </v-flex> -->
+    <Home />
+  </div>
 </template>
 
 <script>
-export default {}
+import Home from '@/components/Home/Home.vue'
+export default {
+  components: {
+    Home,
+  },
+}
 </script>
