@@ -30,7 +30,7 @@
       <v-row v-if="visible">
         <v-col cols="2"></v-col>
         <v-col class="text-center home--cinco" cols="8">
-          <NuxtLink to="/contact" tag="btn">
+          <NuxtLink to="/contact" tag="main">
             <v-btn
               :color="colorBtn"
               dark

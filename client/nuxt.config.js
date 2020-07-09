@@ -73,7 +73,7 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
+          primary: colors.lime.accent2,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
@@ -84,7 +84,7 @@ export default {
           btnCallHover: colors.orange.darken2,
         },
         light: {
-          primary: colors.purple,
+          primary: colors.blue.lighten1,
           secondary: colors.grey.darken1,
           accent: colors.shades.black,
           error: colors.red.accent3,

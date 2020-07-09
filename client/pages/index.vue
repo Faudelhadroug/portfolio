@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <v-flex xs12 sm8 md6> </v-flex> -->
     <Home />
   </div>
 </template>
@@ -10,6 +9,11 @@ import Home from '@/components/Home/Home.vue'
 export default {
   components: {
     Home,
+  },
+  methods: {
+    sendEmail() {
+      alert('test')
+    },
   },
 }
 </script>
