@@ -53,7 +53,7 @@ export default {
         },
         {
           name: 'Twitter',
-          image: require('@/assets/projets/my-irc.png'),
+          image: require('@/assets/projets/twitter.png'),
           description:
             'Le but de ce projet est de créer un réseau social pour les étudiants de notre promotion, qui aura les mêmes fonctionnalités que twitter.Il devra être le plus ressemblant possible en terme de fonctionnalités par rapport au site Twitter. Noté 42/20 (meilleure note possible pour un projet).',
           duree: 'Réalisé en 2 semaines, du 17/2/20 au 1/4/20',
@@ -77,6 +77,17 @@ export default {
         },
       ],
     }
+  },
+  head: {
+    title: 'Projets',
+    meta: [
+      {
+        hid:
+          'Aperçu de quelques projets réalisés au cours de ma formation au Samsung Campus',
+        name: 'description',
+        content: process.env.npm_package_description || '',
+      },
+    ],
   },
 }
 </script>

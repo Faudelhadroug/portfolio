@@ -50,6 +50,16 @@ export default {
       }
     },
   },
+  head: {
+    title: 'Home',
+    meta: [
+      {
+        hid: 'home page de mon portfolio',
+        name: 'description',
+        content: process.env.npm_package_description || '',
+      },
+    ],
+  },
 }
 </script>
 

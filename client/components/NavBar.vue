@@ -43,13 +43,12 @@
         router
         exact
       >
-        <v-icon class="mt-1">{{ item.title }}</v-icon></v-btn
-      >
+        <v-list-item-title class="mt-2" v-text="item.title"
+      /></v-btn>
       <v-spacer></v-spacer>
       <v-btn class="mr-5" @click="toggleTheme">
         {{ darkmode ? 'Light mode' : 'Dark mode' }}
       </v-btn>
-      <v-toolbar-title class="subtitle-2 float-right" v-text="title" />
     </v-app-bar>
   </div>
 </template>

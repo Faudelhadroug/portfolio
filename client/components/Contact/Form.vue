@@ -135,29 +135,6 @@ export default {
   },
 
   methods: {
-    sendEmail(e) {
-      alert('testee')
-      // emailjs
-      //   .sendForm(
-      //     'gmail',
-      //     ' messageportfolio',
-      //     {
-      //       email: this.email,
-      //       name: this.name,
-      //       sujet: this.sujet,
-      //       message: this.message,
-      //     },
-      //     'user_o9uKMJY12wWm6ZgmD9wDI'
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log('SUCCESS!', result.status, result.text)
-      //     },
-      //     (error) => {
-      //       console.log('FAILED...', error)
-      //     }
-      //   )
-    },
     submit() {
       this.$v.$touch()
       if (this.$v.$invalid) {
@@ -193,6 +170,16 @@ export default {
       this.message = ''
       this.submitErrorClass = false
     },
+  },
+  head: {
+    title: 'Contact',
+    meta: [
+      {
+        hid: 'Envoyez un message à Faudel Hadroug',
+        name: 'description',
+        content: process.env.npm_package_description || '',
+      },
+    ],
   },
 }
 </script>
