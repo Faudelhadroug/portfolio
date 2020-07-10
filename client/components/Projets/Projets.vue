@@ -47,8 +47,8 @@ export default {
           name: 'E-commerce',
           image: require('@/assets/projets/e-commerce.png'),
           description:
-            "Site de vente de vêtement haut de gamme blueprint., avec un maximum de fonctionnalités. Gestion d’un groupe de 8 comme Project Manager via Gitlab en utilisant la méthodologie Agile. mise en place d'un pannel admin, connexion api, compte utilisateur, authentification redux...",
-          duree: '',
+            "Site de vente de vêtement haut de gamme 'blueprint', avec un maximum de fonctionnalités. En groupe de 8 en utilisant la méthodologie Agile via Gitlab. mise en place d'un pannel admin, connexion api, compte utilisateur, authentification redux...",
+          duree: 'Réalisé en 1 mois, du 1/6/20 au 30/6/20',
           link: 'https://e-8commerce-client.herokuapp.com/',
         },
         {
@@ -56,7 +56,7 @@ export default {
           image: require('@/assets/projets/my-irc.png'),
           description:
             'Le but de ce projet est de créer un réseau social pour les étudiants de notre promotion, qui aura les mêmes fonctionnalités que twitter.Il devra être le plus ressemblant possible en terme de fonctionnalités par rapport au site Twitter. Noté 42/20 (meilleure note possible pour un projet).',
-          duree: '',
+          duree: 'Réalisé en 2 semaines, du 17/2/20 au 1/4/20',
           link: 'https://tweet-academie-42.herokuapp.com/',
         },
         {
@@ -64,7 +64,7 @@ export default {
           image: require('@/assets/projets/my-irc.png'),
           description:
             'Réalisation d’un IRC, découverte de socket io. Implémentation d’un serveur à connexions simultanées avec plusieurs “channels” ainsi que des fonctionnalités cachées via des lignes de commandes',
-          duree: '',
+          duree: 'Réalisé en 2 semaines, du 11/5/20 au 24/5/20',
           link: '',
         },
         {
@@ -72,7 +72,7 @@ export default {
           image: require('@/assets/projets/my-quizz.png'),
           description:
             "Site qui permet de tester sa culture générale à travers des quiz. Les utilisateurs peuvent créer leur propres quiz et jouer aux quiz des autres utilisateurs. Système d'historique par utilisateur et possibilité de jouer en anonyme.",
-          duree: '',
+          duree: 'Réalisé en 2 semaines, du 20/4/20 au 3/5/20',
           link: '',
         },
       ],
