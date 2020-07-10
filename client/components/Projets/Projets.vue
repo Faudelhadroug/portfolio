@@ -1,0 +1,89 @@
+<template>
+  <v-container>
+    <v-row justify="space-around">
+      <v-col cols="0" md="4"></v-col>
+      <v-col cols="12" md="4">
+        <div class="display-2 text-center">{{ slides[model].name }}</div>
+      </v-col>
+      <v-col cols="0" md="4"></v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="12">
+        <v-carousel v-model="model" show-arrows-on-hover>
+          <v-carousel-item
+            v-for="(slide, i) in slides"
+            :key="i"
+            class="responsive--img"
+            :src="slide.image"
+            :href="slide.link"
+            target="_blank"
+          >
+          </v-carousel-item>
+        </v-carousel>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="1"></v-col>
+      <v-col cols="10">
+        <div>
+          <p>{{ slides[model].description }}</p>
+        </div>
+      </v-col>
+      <v-col cols="1"></v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      model: 0,
+      colors: ['indigo', 'warning', 'pink darken-2', 'red lighten-1'],
+      slides: [
+        {
+          name: 'E-commerce',
+          image: require('@/assets/projets/e-commerce.png'),
+          description:
+            "Site de vente de vêtement haut de gamme blueprint., avec un maximum de fonctionnalités. Gestion d’un groupe de 8 comme Project Manager via Gitlab en utilisant la méthodologie Agile. mise en place d'un pannel admin, connexion api, compte utilisateur, authentification redux...",
+          duree: '',
+          link: 'https://e-8commerce-client.herokuapp.com/',
+        },
+        {
+          name: 'Twitter',
+          image: require('@/assets/projets/my-irc.png'),
+          description:
+            'Le but de ce projet est de créer un réseau social pour les étudiants de notre promotion, qui aura les mêmes fonctionnalités que twitter.Il devra être le plus ressemblant possible en terme de fonctionnalités par rapport au site Twitter. Noté 42/20 (meilleure note possible pour un projet).',
+          duree: '',
+          link: 'https://tweet-academie-42.herokuapp.com/',
+        },
+        {
+          name: 'My_irc',
+          image: require('@/assets/projets/my-irc.png'),
+          description:
+            'Réalisation d’un IRC, découverte de socket io. Implémentation d’un serveur à connexions simultanées avec plusieurs “channels” ainsi que des fonctionnalités cachées via des lignes de commandes',
+          duree: '',
+          link: '',
+        },
+        {
+          name: 'My_quizz',
+          image: require('@/assets/projets/my-quizz.png'),
+          description:
+            "Site qui permet de tester sa culture générale à travers des quiz. Les utilisateurs peuvent créer leur propres quiz et jouer aux quiz des autres utilisateurs. Système d'historique par utilisateur et possibilité de jouer en anonyme.",
+          duree: '',
+          link: '',
+        },
+      ],
+    }
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+.responsive--img {
+  width: 100%;
+  height: auto;
+}
+</style>

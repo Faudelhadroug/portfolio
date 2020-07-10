@@ -174,11 +174,11 @@ export default {
           )
           .then(
             (result) => {
-              console.log('SUCCESS!', result.status, result.text)
-            },
-            (error) => {
-              console.log('FAILED...', error)
-            }
+              // console.log('SUCCESS!', result.status, result.text)
+            } //,
+            // (error) => {
+            //   console.log('FAILED...', error)
+            // }
           )
         setTimeout(() => {
           this.loading = !this.loading
