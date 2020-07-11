@@ -17,12 +17,7 @@
 <script>
 import Presentation from '@/components/Home/Presentation.vue'
 import Preference from '@/components/Home/Preference.vue'
-
 export default {
-  transition: {
-    name: 'fade',
-    mode: 'out-in',
-  },
   components: {
     Presentation,
     Preference,

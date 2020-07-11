@@ -7,13 +7,9 @@
 <script>
 import Home from '@/components/Home/Home.vue'
 export default {
+  transition: 'fade2',
   components: {
     Home,
-  },
-  methods: {
-    sendEmail() {
-      alert('test')
-    },
   },
 }
 </script>

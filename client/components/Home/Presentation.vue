@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12">
           <h3 class="text-center home--first col--presentation--h3">
-            Bonjour, je suis Faudel Hadroug.
+            Bonjour, je suis Faudel Hadroug
           </h3>
           <br />
           <p class="text-center home--second col--presentation--p">

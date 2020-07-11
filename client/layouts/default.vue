@@ -24,13 +24,15 @@ export default {
         { y: 0, duration: 1, ease: 'expo' }
       )
       tl.fromTo('.home--second', { x: -screen.width }, { x: 0, duration: 1 }, 0)
-      tl.fromTo(
-        '.home--third',
-        { x: screen.width * 2 },
-        { x: 0, duration: 0.5 }
-      )
-      tl.fromTo('.home--quatro', { y: screen.width }, { y: 0, duration: 0.4 })
+      tl.fromTo('.home--third', { x: screen.width * 2 }, { x: 0, duration: 1 })
+      tl.fromTo('.home--quatro', { y: screen.width }, { y: 0, duration: 1 }, 1)
       tl.fromTo('.home--cinco', { opacity: 0 }, { opacity: 1, duration: 10 })
+      tl.fromTo(
+        '.home--seis',
+        { opacity: 0 },
+        { opacity: 1, duration: 5 },
+        '-=8.5'
+      )
       tl.from('.home--cinco', 1, { scale: 1.04, repeat: -1, ease: 'boucing' })
     }
   },

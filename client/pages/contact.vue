@@ -7,7 +7,7 @@
 <script>
 import Form from '@/components/Contact/Form.vue'
 export default {
-  transition: 'fade',
+  transition: 'fade2',
   components: {
     Form,
   },

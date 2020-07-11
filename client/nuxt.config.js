@@ -77,6 +77,8 @@ export default {
           success: colors.green.accent3,
           btnCall: colors.lime.accent2,
           btnCallHover: colors.orange.darken2,
+          btnCall2: colors.blue.lighten1,
+          btnCallHover2: colors.deepPurple.darken3,
         },
         light: {
           primary: colors.blue.lighten1,
@@ -85,6 +87,8 @@ export default {
           error: colors.red.accent3,
           btnCall: colors.blue.lighten1,
           btnCallHover: colors.deepPurple.darken3,
+          btnCall2: colors.blue.lighten1,
+          btnCallHover2: colors.deepPurple.darken3,
         },
       },
     },

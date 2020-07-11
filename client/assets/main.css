@@ -16,3 +16,21 @@
     opacity: 0;
     transform: translate(2em, 0);
   }
+
+  .fade2-enter {
+    opacity: 0;
+    transform: translate(2em, 0);
+  }
+  
+  .fade2-enter-active,
+  .fade2-leave-active {
+    transition-duration: 1s;
+    transition-property: height, opacity, transform;
+    transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+    overflow: hidden;
+  }
+  
+  .fade2-leave-to {
+    opacity: 0;
+    transform: translate(-2em, 0);
+  }

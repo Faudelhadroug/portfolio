@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-footer :absolute="!fixed" app>
-      <span> Faudel Hadroug &copy; {{ new Date().getFullYear() }}</span>
+      <span> Faudel Hadroug &copy; {{ new Date().getFullYear() }} </span>
     </v-footer>
   </div>
 </template>

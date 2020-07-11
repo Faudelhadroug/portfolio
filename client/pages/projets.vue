@@ -7,6 +7,7 @@
 <script>
 import Projets from '@/components/Projets/Projets.vue'
 export default {
+  transition: 'fade',
   components: {
     Projets,
   },

@@ -46,6 +46,17 @@
         <v-list-item-title class="mt-2" v-text="item.title"
       /></v-btn>
       <v-spacer></v-spacer>
+      <a href="http://www.github.com/faudelhadroug" target="_blank">
+        <v-btn v-if="darkmode"
+          ><v-img :src="require('@/assets/github-light.png')" />
+        </v-btn>
+        <v-btn v-else
+          ><v-img :src="require('@/assets/github-dark.png')" />
+        </v-btn>
+      </a>
+      <a href="/cv-Faudel_Hadroug.pdf" download="CV-Faudel_Hadroug">
+        <v-btn>CV</v-btn>
+      </a>
       <v-btn class="mr-5" @click="toggleTheme">
         {{ darkmode ? 'Light mode' : 'Dark mode' }}
       </v-btn>
@@ -94,5 +105,8 @@ export default {
 <style lang="scss" scoped>
 #navBar {
   margin-bottom: 60px;
+}
+.v-application a {
+  text-decoration: none;
 }
 </style>

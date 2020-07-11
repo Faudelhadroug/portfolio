@@ -75,6 +75,18 @@
         </v-col>
         <v-col cols="2"></v-col>
       </v-row>
+      <v-row>
+        <v-col cols="2" sm="4"></v-col>
+        <v-col cols="8" sm="4">
+          <v-alert v-show="success" type="success" width="225">
+            Message envoyé
+          </v-alert>
+          <v-alert v-show="error" type="error" width="225">
+            Erreur serveur
+          </v-alert>
+        </v-col>
+        <v-col cols="2" sm="4"></v-col>
+      </v-row>
     </form>
   </v-container>
 </template>
@@ -92,7 +104,6 @@ export default {
     sujet: { maxLength: maxLength(84) },
     message: { required, maxLength: maxLength(10000) },
   },
-
   data: () => ({
     form: null,
     name: '',
@@ -101,6 +112,8 @@ export default {
     message: '',
     submitErrorClass: false,
     loading: false,
+    success: false,
+    error: false,
   }),
 
   computed: {
@@ -135,6 +148,18 @@ export default {
   },
 
   methods: {
+    successAlert() {
+      this.success = !this.success
+      setTimeout(() => {
+        this.success = !this.success
+      }, 2500)
+    },
+    errorAlert() {
+      this.error = !this.error
+      setTimeout(() => {
+        this.error = !this.error
+      }, 2500)
+    },
     submit() {
       this.$v.$touch()
       if (this.$v.$invalid) {
@@ -147,19 +172,18 @@ export default {
             'gmail',
             'messageportfolio',
             '.form',
-            'user_o9uKMJY12wWm6ZgmD9wDI'
+            'auser_o9uKMJY12wWm6ZgmD9wDI'
           )
           .then(
             (result) => {
-              // console.log('SUCCESS!', result.status, result.text)
-            } //,
-            // (error) => {
-            //   console.log('FAILED...', error)
-            // }
+              this.loading = !this.loading
+              this.successAlert()
+            },
+            () => {
+              this.loading = !this.loading
+              this.errorAlert()
+            }
           )
-        setTimeout(() => {
-          this.loading = !this.loading
-        }, 500)
       }
     },
     clear() {
@@ -175,7 +199,7 @@ export default {
     title: 'Contact',
     meta: [
       {
-        hid: 'Envoyez un message à Faudel Hadroug',
+        hid: 'Envoyez un message à Faudel',
         name: 'description',
         content: process.env.npm_package_description || '',
       },
