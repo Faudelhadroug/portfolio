@@ -15,13 +15,7 @@
 </template>
 
 <script>
-import Presentation from '@/components/Home/Presentation.vue'
-import Preference from '@/components/Home/Preference.vue'
 export default {
-  components: {
-    Presentation,
-    Preference,
-  },
   data() {
     return {
       errorAlertDevice: false,

@@ -77,7 +77,7 @@ export default {
           success: colors.green.accent3,
           btnCall: colors.lime.accent2,
           btnCallHover: colors.orange.darken2,
-          btnCall2: colors.blue.lighten1,
+          btnCall2: colors.green.darken1,
           btnCallHover2: colors.deepPurple.darken3,
         },
         light: {
