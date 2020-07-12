@@ -4,6 +4,18 @@
       <v-row>
         <v-col cols="2"></v-col>
         <v-col cols="8">
+          <h2>Formulaire de contact</h2>
+        </v-col>
+        <v-col cols="2"></v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="2"></v-col>
+        <v-col
+          v-if="this.$vuetify.theme.dark"
+          class="card"
+          :style="cardStyle"
+          cols="8"
+        >
           <v-text-field
             v-model="sujet"
             :counter="84"
@@ -12,12 +24,6 @@
             @input="$v.sujet.$touch()"
             @blur="$v.sujet.$touch()"
           ></v-text-field>
-        </v-col>
-        <v-col cols="2"></v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="2"></v-col>
-        <v-col cols="8">
           <v-textarea
             v-model="message"
             :error-messages="messageErrors"
@@ -28,12 +34,6 @@
             @input="$v.message.$touch()"
             @blur="$v.message.$touch()"
           ></v-textarea>
-        </v-col>
-        <v-col cols="2"></v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="2"></v-col>
-        <v-col cols="8">
           <v-text-field
             v-model="name"
             :error-messages="nameErrors"
@@ -44,12 +44,6 @@
             @input="$v.name.$touch()"
             @blur="$v.name.$touch()"
           ></v-text-field>
-        </v-col>
-        <v-col cols="2"></v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="2"></v-col>
-        <v-col cols="8">
           <v-text-field
             v-model="email"
             :error-messages="emailErrors"
@@ -59,19 +53,59 @@
             @input="$v.email.$touch()"
             @blur="$v.email.$touch()"
           ></v-text-field>
-        </v-col>
-        <v-col cols="2"></v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="2"></v-col>
-        <v-col cols="8">
           <v-btn
             :loading="loading"
             :class="{ 'mr-4': true, error: submitErrorClass }"
             @click="submit"
-            >submit</v-btn
+            >Envoyer</v-btn
           >
-          <v-btn @click="clear">clear</v-btn>
+          <v-btn @click="clear">Effacer</v-btn>
+        </v-col>
+        <v-col v-else class="card" :style="cardStyleLight" cols="8">
+          <v-text-field
+            v-model="sujet"
+            :counter="84"
+            name="sujet"
+            label="Sujet (facultatif)"
+            @input="$v.sujet.$touch()"
+            @blur="$v.sujet.$touch()"
+          ></v-text-field>
+          <v-textarea
+            v-model="message"
+            :error-messages="messageErrors"
+            :counter="10000"
+            name="message"
+            label="Message"
+            required
+            @input="$v.message.$touch()"
+            @blur="$v.message.$touch()"
+          ></v-textarea>
+          <v-text-field
+            v-model="name"
+            :error-messages="nameErrors"
+            :counter="10"
+            name="name"
+            label="Nom"
+            required
+            @input="$v.name.$touch()"
+            @blur="$v.name.$touch()"
+          ></v-text-field>
+          <v-text-field
+            v-model="email"
+            :error-messages="emailErrors"
+            name="email"
+            label="Email"
+            required
+            @input="$v.email.$touch()"
+            @blur="$v.email.$touch()"
+          ></v-text-field>
+          <v-btn
+            :loading="loading"
+            :class="{ 'mr-4': true, error: submitErrorClass }"
+            @click="submit"
+            >Envoyer</v-btn
+          >
+          <v-btn @click="clear">Effacer</v-btn>
         </v-col>
         <v-col cols="2"></v-col>
       </v-row>
@@ -114,6 +148,14 @@ export default {
     loading: false,
     success: false,
     error: false,
+    cardStyle: {
+      border: '2px solid white',
+      borderRadius: '5px',
+    },
+    cardStyleLight: {
+      border: '2px solid black',
+      borderRadius: '5px',
+    },
   }),
 
   computed: {
@@ -121,7 +163,7 @@ export default {
       const errors = []
       if (!this.$v.name.$dirty) return errors
       !this.$v.name.maxLength &&
-        errors.push('Name must be at most 10 characters long')
+        errors.push('Votre nom ne peut pas contenir plus de 42 caractères')
       !this.$v.name.required &&
         errors.push("J'ai besoin de votre nom pour savoir qui recontacter.")
       return errors
@@ -129,10 +171,10 @@ export default {
     emailErrors() {
       const errors = []
       if (!this.$v.email.$dirty) return errors
-      !this.$v.email.email && errors.push('Must be valid e-mail')
+      !this.$v.email.email && errors.push("Votre email n'est pas valide")
       !this.$v.email.required &&
         errors.push(
-          'Veuillez entrée votre adresse email afin que je puisse vous recontacter'
+          'Veuillez entrer votre adresse email afin que je puisse vous recontacter'
         )
       return errors
     },
@@ -209,6 +251,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card {
+  height: 100% !important;
+}
 @media (max-width: 959px) {
   .form {
     margin-top: 10%;

@@ -78,6 +78,9 @@ export default {
 }
 </script>
 <style scoped>
+.card {
+  width: 800px;
+}
 .col--presentation--h3 {
   font-size: 3vw !important;
 }

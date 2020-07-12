@@ -21,18 +21,19 @@
         <v-col cols="1"></v-col>
       </v-row>
       <v-row>
-        <v-col cols="6">
+        <v-col cols="1"></v-col>
+        <v-col cols="5">
           <v-img class="img3 home--quatro" :src="react" alt="react logo" />
         </v-col>
-        <v-col cols="6">
+        <v-col cols="5">
           <v-img class="img home--quatro" :src="nodejs" alt="nodejs logo" />
         </v-col>
+        <v-col cols="1"></v-col>
       </v-row>
       <v-row v-if="visible">
         <v-col cols="2"></v-col>
-        <v-col class="text-center home--seis mt-10" cols="8">
+        <v-col class="text-center home--seis mt-13 pb-4" cols="8">
           <v-btn
-            class="mb-10"
             :color="colorBtn"
             dark
             large

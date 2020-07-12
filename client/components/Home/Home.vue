@@ -1,13 +1,31 @@
 <template>
   <div>
-    <!-- <div class="dev">{{ typeDevice }}</div> -->
     <v-container>
-      <v-row>
+      <v-row class="mb-10">
+        <v-col cols="1"></v-col>
         <v-col id="col--presentation" cols="12" md="6">
-          <Presentation />
+          <v-card
+            v-if="this.$vuetify.theme.dark"
+            class="card"
+            :style="cardStyle"
+          >
+            <Presentation />
+          </v-card>
+          <v-card v-else class="card" :style="cardStyleLight">
+            <Presentation />
+          </v-card>
         </v-col>
         <v-col id="col--preference" cols="12" md="4">
-          <Preference />
+          <v-card
+            v-if="this.$vuetify.theme.dark"
+            class="card"
+            :style="cardStyle"
+          >
+            <Preference />
+          </v-card>
+          <v-card v-else class="card" :style="cardStyleLight">
+            <Preference />
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -21,6 +39,14 @@ export default {
       errorAlertDevice: false,
       first: 'first',
       typeDevice: '',
+      cardStyle: {
+        border: '2px solid white',
+        borderRadius: '5px',
+      },
+      cardStyleLight: {
+        border: '2px solid black',
+        borderRadius: '5px',
+      },
     }
   },
   created() {
@@ -60,7 +86,9 @@ export default {
   z-index: 999;
   font-size: 50px;
 }
-
+.card {
+  height: 100% !important;
+}
 #col--preference {
   font-size: 3vw;
 }

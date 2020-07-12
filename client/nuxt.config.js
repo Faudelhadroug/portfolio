@@ -89,6 +89,7 @@ export default {
           btnCallHover: colors.deepPurple.darken3,
           btnCall2: colors.blue.lighten1,
           btnCallHover2: colors.deepPurple.darken3,
+          white: colors.dark,
         },
       },
     },
