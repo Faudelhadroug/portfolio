@@ -26,9 +26,18 @@
 
     <v-row>
       <v-col cols="1"></v-col>
-      <v-col cols="10">
+      <v-col cols="12" md="5">
         <div>
           <p>{{ slides[model].description }}</p>
+        </div>
+      </v-col>
+      <v-col cols="1"></v-col>
+      <v-col cols="12" md="4">
+        <div>
+          <p>{{ slides[model].duree }}</p>
+        </div>
+        <div>
+          <p></p>
         </div>
       </v-col>
       <v-col cols="1"></v-col>

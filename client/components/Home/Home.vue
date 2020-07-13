@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <v-row class="mb-10">
+      <v-row>
         <v-col cols="1"></v-col>
         <v-col id="col--presentation" cols="12" md="6">
           <v-card
@@ -18,12 +18,12 @@
         <v-col id="col--preference" cols="12" md="4">
           <v-card
             v-if="this.$vuetify.theme.dark"
-            class="card"
+            class="card2"
             :style="cardStyle"
           >
             <Preference />
           </v-card>
-          <v-card v-else class="card" :style="cardStyleLight">
+          <v-card v-else class="card2" :style="cardStyleLight">
             <Preference />
           </v-card>
         </v-col>
@@ -86,8 +86,8 @@ export default {
   z-index: 999;
   font-size: 50px;
 }
-.card {
-  height: 100% !important;
+.card2 {
+  height: 90% !important;
 }
 #col--preference {
   font-size: 3vw;
@@ -97,6 +97,7 @@ export default {
     font-size: 8vw !important;
   }
 }
+
 @media (min-width: 960px) {
   #col--presentation {
     margin-top: 10%;

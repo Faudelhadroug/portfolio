@@ -46,6 +46,14 @@
         <v-list-item-title class="mt-2" v-text="item.title"
       /></v-btn>
       <v-spacer></v-spacer>
+      <a href="https://www.linkedin.com/in/faudel-hadroug/" target="_blank">
+        <v-btn
+          ><v-img
+            style="width: 32px;"
+            :src="require('@/assets/linkedin.svg')"
+          />
+        </v-btn>
+      </a>
       <a href="http://www.github.com/faudelhadroug" target="_blank">
         <v-btn v-if="darkmode"
           ><v-img :src="require('@/assets/github-light.png')" />

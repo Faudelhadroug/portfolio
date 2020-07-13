@@ -27,11 +27,12 @@
           </p>
         </v-col>
       </v-row>
-      <v-row v-if="visible">
+      <v-row>
         <v-col cols="2"></v-col>
         <v-col class="text-center home--cinco" cols="8">
           <NuxtLink to="/contact" tag="main">
             <v-btn
+              class="mouseOver"
               :color="colorBtn"
               dark
               large
@@ -79,7 +80,10 @@ export default {
 </script>
 <style scoped>
 .card {
-  width: 800px;
+  width: 700px;
+}
+.mouseOver {
+  transition: background-color 0.3s;
 }
 .col--presentation--h3 {
   font-size: 3vw !important;

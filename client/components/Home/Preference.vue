@@ -30,14 +30,16 @@
         </v-col>
         <v-col cols="1"></v-col>
       </v-row>
+      <v-spacer></v-spacer>
       <v-row v-if="visible">
         <v-col cols="2"></v-col>
-        <v-col class="text-center home--seis mt-13 pb-4" cols="8">
+        <v-col class="text-center home--seis pb-4" cols="8">
           <v-btn
             :color="colorBtn"
             dark
             large
             width="175px"
+            class="mouseOver"
             :outlined="!hover"
             :loading="loading"
             @mouseover="hover = true"
@@ -131,7 +133,9 @@ export default {
   border-radius: 2%;
   opacity: 0.98;
 }
-
+.mouseOver {
+  transition: background-color 0.3s;
+}
 .fade3-enter {
   opacity: 0;
 }
