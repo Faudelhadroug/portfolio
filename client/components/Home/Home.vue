@@ -66,7 +66,7 @@ export default {
     },
   },
   head: {
-    title: 'Home',
+    title: 'Accueil',
     meta: [
       {
         hid: 'home page de mon portfolio',
@@ -89,6 +89,13 @@ export default {
 .card2 {
   height: 90% !important;
 }
+
+@media (max-width: 1010px) {
+  .card2 {
+    height: 98% !important;
+  }
+}
+
 #col--preference {
   font-size: 3vw;
 }

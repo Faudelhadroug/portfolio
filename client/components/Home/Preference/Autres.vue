@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-lg-h6 mt-3">Méthedologies :</div>
+    <div class="text-lg-h6 mt-3">Méthodologies :</div>
     <v-list>
       <v-list-item v-for="methodologie in methodologies" :key="methodologie">
         <v-list-item-content>
@@ -34,6 +34,7 @@ export default {
     return {
       methodologies: ['Agile'],
       autres: [
+        'Trello',
         'Git',
         'Github',
         'Gitlab',

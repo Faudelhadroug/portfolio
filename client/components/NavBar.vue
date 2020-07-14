@@ -47,10 +47,16 @@
       /></v-btn>
       <v-spacer></v-spacer>
       <a href="https://www.linkedin.com/in/faudel-hadroug/" target="_blank">
-        <v-btn
+        <v-btn v-if="darkmode"
           ><v-img
             style="width: 32px;"
-            :src="require('@/assets/linkedin.svg')"
+            :src="require('@/assets/linkedin-light.svg')"
+          />
+        </v-btn>
+        <v-btn v-else
+          ><v-img
+            style="width: 32px;"
+            :src="require('@/assets/linkedin-black.svg')"
           />
         </v-btn>
       </a>

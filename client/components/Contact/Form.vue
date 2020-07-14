@@ -59,7 +59,7 @@
             @click="submit"
             >Envoyer</v-btn
           >
-          <v-btn @click="clear">Effacer</v-btn>
+          <v-btn class="btn--clear" @click="clear">Effacer</v-btn>
         </v-col>
         <v-col v-else class="card" :style="cardStyleLight" cols="8">
           <v-text-field
@@ -105,7 +105,7 @@
             @click="submit"
             >Envoyer</v-btn
           >
-          <v-btn @click="clear">Effacer</v-btn>
+          <v-btn class="btn--clear" @click="clear">Effacer</v-btn>
         </v-col>
         <v-col cols="2"></v-col>
       </v-row>
@@ -253,6 +253,12 @@ export default {
 <style lang="scss" scoped>
 .card {
   height: 100% !important;
+}
+@media (max-width: 375px) {
+  .btn--clear {
+    width: 70px;
+    float: right;
+  }
 }
 @media (max-width: 959px) {
   .form {
