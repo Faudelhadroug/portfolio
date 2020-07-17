@@ -16,16 +16,7 @@
           </v-card>
         </v-col>
         <v-col id="col--preference" cols="12" md="4">
-          <v-card
-            v-if="this.$vuetify.theme.dark"
-            class="card2"
-            :style="cardStyle"
-          >
-            <Preference />
-          </v-card>
-          <v-card v-else class="card2" :style="cardStyleLight">
-            <Preference />
-          </v-card>
+          <Preference />
         </v-col>
       </v-row>
     </v-container>
@@ -86,16 +77,6 @@ export default {
   z-index: 999;
   font-size: 50px;
 }
-.card2 {
-  height: 90% !important;
-}
-
-@media (max-width: 1010px) {
-  .card2 {
-    height: 98% !important;
-  }
-}
-
 #col--preference {
   font-size: 3vw;
 }

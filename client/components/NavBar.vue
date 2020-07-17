@@ -68,7 +68,7 @@
           ><v-img :src="require('@/assets/github-dark.png')" />
         </v-btn>
       </a>
-      <a href="/cv-Faudel_Hadroug.pdf" download="CV-Faudel_Hadroug">
+      <a href="https://drive.google.com/file/d/1wAMuOy8BzKnugOX_052xHij6DxYDMhBv/view?usp=sharing" target="_blank">
         <v-btn>CV</v-btn>
       </a>
       <v-btn class="mr-5" @click="toggleTheme">

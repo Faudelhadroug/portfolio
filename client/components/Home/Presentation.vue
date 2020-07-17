@@ -79,9 +79,6 @@ export default {
 }
 </script>
 <style scoped>
-.card {
-  width: 700px;
-}
 .mouseOver {
   transition: background-color 0.3s;
 }

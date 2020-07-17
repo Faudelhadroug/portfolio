@@ -41,7 +41,7 @@ export default {
 
 <style>
 .container {
-  max-width: 100%;
+  max-width: 100% !important;
 }
 body {
   margin: 0;
